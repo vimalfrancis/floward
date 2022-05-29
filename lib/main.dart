@@ -1,4 +1,5 @@
 import 'package:floward_flutter/provider/userlistscreenprovider.dart';
+import 'package:floward_flutter/service/locationservice.dart';
 import 'package:floward_flutter/view/timeline.dart';
 import 'package:floward_flutter/view/userlist.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,13 @@ Future<void> main() async {
     assetsDirectory: 'assets/lang/',
   );
 
+  getCurrentLocation();
+
   /// Run MyApp as child of LocalizedApp
   runApp(
     LocalizedApp(
       child: const MyApp(),
+
     ),
   );
 }

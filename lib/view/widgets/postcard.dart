@@ -14,7 +14,7 @@ postTile(Post postdata, {required Function onClick}) {
 
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(children: [
+          child: 
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               //SizedBox
               Text(
@@ -33,7 +33,7 @@ postTile(Post postdata, {required Function onClick}) {
                 ), //Textstyle
               ),
             ])
-          ]), //Text
+          , //Text
           //SizedBox
           //Text
           //SizedBox

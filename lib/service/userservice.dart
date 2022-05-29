@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:floward_flutter/model/user.dart';
 import 'package:floward_flutter/service/api.dart';
 
@@ -10,7 +12,13 @@ class UserService extends API {
       List<User> userList = userFromJson(response.data);
 
       return userList;
-    } catch (e) {
+    } on TimeoutException catch (e) {
+
+    print(e);
+
+  // A timeout occurred.
+} 
+     catch (e) {
       return null;
     }
   }

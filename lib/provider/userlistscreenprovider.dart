@@ -10,6 +10,20 @@ class UserProvider extends ChangeNotifier {
 
   bool isLoading = false;
 
+  Future<void>getData()async
+  {
+    isLoading = true;
+    notifyListeners();
+    try{
+    Future.wait([getUserList(),getPostList()],eagerError: true).then((value) {
+    isLoading = false;
+    mergPost();
+    });
+    } catch(e){
+       print(e);
+    }
+  }
+
   Future<void> getUserList() async {
     isLoading = true;
     notifyListeners();
@@ -38,7 +52,7 @@ class UserProvider extends ChangeNotifier {
   }
 
   mergPost() {
-    userListResponse!.forEach((userElement) {
+    userListResponse?.forEach((userElement) {
       postListResponse!.forEach((postElement) {
         if (userElement!.userId == postElement!.userId) {
           userElement.posts!.add(postElement);

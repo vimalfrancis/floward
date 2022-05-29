@@ -20,7 +20,7 @@ class UserListState extends State<UserListScreen> {
   // ignore: must_call_super
   void initState() {
     Future.microtask(() {
-      context.read<UserProvider>().getUserList();
+      context.read<UserProvider>().getData();
     });
   }
 
