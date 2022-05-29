@@ -11,20 +11,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-  
   cupertino_icons: ^1.0.2
   localize_and_translate:
   provider: ^6.0.2
-  dio: ^4.0.4
+  dio: ^4.0.4 
+  http: ^0.13.4
+  background_location: ^0.8.1
+  dartdoc: ^5.1.2                        
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  
+   
   flutter_lints: ^2.0.0
+  mockito: ^5.2.0
+  build_runner: ^2.1.11
+
 
 
 flutter:
